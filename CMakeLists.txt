@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.23)
+project(TFrac)
+add_subdirectory(test)
+set(CMAKE_CXX_STANDARD 14)
+add_executable(TFrac main.cpp TFrac.h)
