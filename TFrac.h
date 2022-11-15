@@ -12,7 +12,6 @@ class ZeroDivEx : public std::runtime_error {
 public:
     explicit ZeroDivEx(int dividend) : runtime_error(
             "Attempted to divide " + std::to_string(dividend) + " by zero") {
-
     }
 
     [[nodiscard]] static int getCode() {
@@ -57,7 +56,7 @@ public:
         this->num = num;
         this->div = 1;
     }
-
+//Tfrac temp="123/23"
     explicit TFrac(int num, int div) {
         this->num = num;
         this->div = div;
@@ -125,7 +124,6 @@ public:
     int operator/=(const TFrac &b) {
         this->num /= b.getNum();
         this->div /= b.getDiv();
-        reduce();
         return 0;
     }
 
